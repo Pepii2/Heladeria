@@ -1,0 +1,692 @@
+// ===================================
+// Custom Styles for Heladería
+// Modern Minimalist Design with Vintage Touch
+// ===================================
+
+// ===================================
+// Global Styles
+// ===================================
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ===================================
+// Navbar Custom Styling
+// ===================================
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid $grey-lighter;
+
+  &.is-transparent {
+    background-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  .logo {
+    h1 {
+      font-family: $family-serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 0;
+      color: $primary-dark;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+    }
+
+    .tagline {
+      font-family: $family-sans-serif;
+      font-size: 0.75rem;
+      color: $grey-dark;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
+  .navbar-item {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+
+    &.is-active {
+      font-weight: 600;
+    }
+  }
+}
+
+// Spacer for fixed navbar
+.navbar + * {
+  padding-top: 4.5rem;
+}
+
+// ===================================
+// Hero Section - Full Width Banner
+// ===================================
+.hero {
+  &.is-fullheight-with-navbar {
+    min-height: calc(100vh - 4.5rem);
+  }
+
+  &.hero-home {
+    background: linear-gradient(135deg, $cream 0%, $beige 100%);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('../images/hero-pattern.svg');
+      opacity: 0.03;
+      z-index: 0;
+    }
+
+    .hero-body {
+      position: relative;
+      z-index: 1;
+      padding: 8rem 2rem;
+    }
+
+    .title {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
+  }
+
+  &.is-vintage {
+    background: linear-gradient(135deg, $beige 0%, $beige-dark 100%);
+
+    .title {
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+// ===================================
+// Sections
+// ===================================
+.section {
+  &.section-alt {
+    background-color: $white-ter;
+  }
+
+  &.section-beige {
+    background-color: $beige;
+  }
+
+  &.section-cream {
+    background-color: $cream;
+  }
+
+  &.section-dark {
+    background-color: $black;
+    color: $white-ter;
+
+    .title,
+    .subtitle {
+      color: $white;
+    }
+  }
+}
+
+// Page Headers
+.page-header {
+  background-color: $cream;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid $grey-lighter;
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+// ===================================
+// Buttons - Modern & Minimal
+// ===================================
+.button {
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+
+  &.is-primary {
+    &:hover {
+      background-color: $primary-dark;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &.is-outlined {
+    &.is-primary {
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  &.is-pedidosya {
+    background-color: $pedidosya;
+    border-color: $pedidosya;
+    color: white;
+
+    &:hover {
+      background-color: darken($pedidosya, 5%);
+      border-color: darken($pedidosya, 5%);
+      transform: translateY(-1px);
+    }
+  }
+
+  &.is-rappi {
+    background-color: $rappi;
+    border-color: $rappi;
+    color: white;
+
+    &:hover {
+      background-color: darken($rappi, 5%);
+      border-color: darken($rappi, 5%);
+      transform: translateY(-1px);
+    }
+  }
+
+  &.is-whatsapp {
+    background-color: $whatsapp;
+    border-color: $whatsapp;
+    color: white;
+
+    &:hover {
+      background-color: darken($whatsapp, 5%);
+      border-color: darken($whatsapp, 5%);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// ===================================
+// Product Cards - E-commerce Style
+// ===================================
+.product-card {
+  background-color: $white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+    .product-image img {
+      transform: scale(1.05);
+    }
+  }
+
+  .product-image {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; // 1:1 aspect ratio
+    overflow: hidden;
+    background-color: $beige;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  .product-info {
+    padding: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: $primary-dark;
+      font-weight: 500;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: $grey-dark;
+      margin: 0;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $primary;
+      margin-top: 0.75rem;
+    }
+  }
+}
+
+// Product Grid
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+// ===================================
+// Category Navigation (Products Page)
+// ===================================
+.category-nav {
+  background-color: $white;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 4.5rem;
+  z-index: 100;
+  border-bottom: 1px solid $grey-lighter;
+
+  .category-link {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $grey-dark;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+    }
+
+    &.is-active {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+}
+
+// ===================================
+// Value Cards - Feature Highlights
+// ===================================
+.value-card {
+  background-color: $white;
+  padding: 3rem 2rem;
+  text-align: center;
+  height: 100%;
+  border: 1px solid $grey-lighter;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $primary;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $primary-dark;
+  }
+
+  p {
+    color: $grey-dark;
+    line-height: 1.6;
+  }
+}
+
+// ===================================
+// History Timeline Blocks
+// ===================================
+.history-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  &.is-reverse {
+    direction: rtl;
+
+    > * {
+      direction: ltr;
+    }
+  }
+
+  .history-image {
+    img {
+      width: 100%;
+      filter: grayscale(100%) contrast(1.1);
+      opacity: 0.9;
+      transition: all 0.5s ease;
+
+      &:hover {
+        filter: grayscale(80%) contrast(1);
+        opacity: 1;
+      }
+    }
+
+    .image-caption {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      font-style: italic;
+      color: $grey-dark;
+      text-align: center;
+    }
+  }
+
+  .history-text {
+    .title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: $grey-darker;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: $grey-dark;
+    }
+
+    .quote {
+      margin-top: 2rem;
+      padding-left: 2rem;
+      border-left: 3px solid $secondary;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: $primary;
+    }
+  }
+}
+
+// ===================================
+// Contact Section
+// ===================================
+.contact-card {
+  background-color: $white;
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 1px solid $grey-lighter;
+  transition: all 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    border-color: $primary;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $grey-dark;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Contact Form
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: $white;
+  padding: 3rem;
+  border: 1px solid $grey-lighter;
+
+  .label {
+    font-weight: 600;
+    color: $primary-dark;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+  }
+
+  .input,
+  .textarea,
+  .select select {
+    border-color: $grey-lighter;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 0.125em rgba($primary, 0.25);
+    }
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.form-status {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+  display: none;
+
+  &.is-success {
+    display: block;
+    background-color: lighten($success, 45%);
+    color: darken($success, 20%);
+    border: 1px solid lighten($success, 30%);
+  }
+
+  &.is-error {
+    display: block;
+    background-color: #fee;
+    color: #c33;
+    border: 1px solid #fcc;
+  }
+}
+
+// FAQ Items
+.faq-item {
+  background-color: $white;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid $grey-lighter;
+  border-left: 3px solid $secondary;
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: $primary-dark;
+  }
+
+  p {
+    color: $grey-dark;
+    margin: 0;
+  }
+}
+
+// Map Placeholder
+.map-placeholder {
+  background-color: $beige;
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 2px dashed $grey-light;
+
+  .map-note {
+    color: $grey-dark;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+}
+
+// ===================================
+// Footer
+// ===================================
+.footer {
+  border-top: 1px solid $grey-lighter;
+
+  .title,
+  .subtitle {
+    color: $white;
+  }
+
+  a {
+    color: $white-ter;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+
+    p {
+      font-size: 0.875rem;
+      color: $grey-light;
+      margin: 0;
+    }
+  }
+}
+
+// ===================================
+// Utility Classes
+// ===================================
+.has-text-primary-dark {
+  color: $primary-dark !important;
+}
+
+.has-background-cream {
+  background-color: $cream !important;
+}
+
+.has-background-beige {
+  background-color: $beige !important;
+}
+
+.has-text-vintage {
+  color: $secondary !important;
+}
+
+.spacer-large {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.spacer {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+// ===================================
+// Animations
+// ===================================
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+// ===================================
+// Responsive Utilities
+// ===================================
+@media screen and (max-width: 768px) {
+  .hero.hero-home {
+    .hero-body {
+      padding: 4rem 1.5rem;
+    }
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .page-header {
+    padding: 4rem 1.5rem 2rem;
+
+    .title {
+      font-size: 2rem;
+    }
+  }
+
+  .contact-form {
+    padding: 2rem 1.5rem;
+  }
+}

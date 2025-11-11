@@ -1,0 +1,13 @@
+// ===================================
+// Heladería Artesanal
+// Main SASS Entry Point
+// ===================================
+
+// 1. Import custom variables (must be before Bulma)
+@import 'variables';
+
+// 2. Import Bulma framework
+@import '../node_modules/bulma/bulma.sass';
+
+// 3. Import custom styles (after Bulma)
+@import 'custom';

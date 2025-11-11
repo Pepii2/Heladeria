@@ -1,0 +1,133 @@
+// ===================================
+// Bulma Variable Overrides
+// Modern Vintage Design System - Inspired by Premium E-commerce
+// ===================================
+
+// Primary Colors - Refined warm palette
+$primary: #8B7355;        // Warm caramel brown
+$primary-dark: #5D4E3E;   // Deep chocolate brown
+$primary-light: #B39175;  // Light caramel
+$primary-invert: #FFFFFF;
+
+// Secondary Colors - Sophisticated accents
+$secondary: #D4AF37;      // Vintage gold
+$accent: #A67C52;         // Rich tan
+$accent-light: #F5E6D3;   // Soft beige
+
+// Neutral Palette - Clean & Minimal
+$black: #1A1A1A;          // Near black (not pure black)
+$black-bis: #2C2C2C;
+$grey-darker: #4A4A4A;
+$grey-dark: #6B6B6B;
+$grey: #8F8F8F;
+$grey-light: #CFCFCF;
+$grey-lighter: #E8E8E8;
+$white-ter: #F9F9F9;
+$white-bis: #FCFCFC;
+$white: #FFFFFF;
+
+// Background Colors
+$cream: #FFFCF5;          // Warmer white
+$beige: #FAF6F1;          // Light warm grey
+$beige-dark: #F0EBE5;
+
+// Delivery Service Colors
+$pedidosya: #FA0050;
+$rappi: #FF6B00;
+$whatsapp: #25D366;
+
+// Bulma Color System Overrides
+$link: $primary;
+$link-hover: $primary-dark;
+$link-active: $primary-dark;
+$info: $secondary;
+$success: $whatsapp;
+
+$text: $black;
+$text-strong: $black;
+$text-light: $grey-dark;
+
+// Background
+$body-background-color: $white;
+$section-padding: 5rem 2rem;
+$section-padding-medium: 6rem 2rem;
+$section-padding-large: 8rem 2rem;
+
+// Container
+$container-max-width: 1240px;
+
+// Typography - Elegant Serif + Modern Sans
+// Using Google Fonts: Cormorant Garamond + Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+$family-serif: 'Cormorant Garamond', Georgia, serif;
+$family-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$family-primary: $family-sans-serif;
+$family-secondary: $family-serif;
+
+// Title Typography
+$title-family: $family-serif;
+$title-color: $primary-dark;
+$title-weight: 600;
+$title-line-height: 1.2;
+
+$subtitle-family: $family-sans-serif;
+$subtitle-color: $grey-dark;
+$subtitle-weight: 400;
+$subtitle-line-height: 1.5;
+
+// Body Typography
+$body-family: $family-sans-serif;
+$body-size: 16px;
+$body-line-height: 1.7;
+$body-weight: 400;
+
+// Size Scale
+$size-1: 3.5rem;    // 56px
+$size-2: 2.75rem;   // 44px
+$size-3: 2.25rem;   // 36px
+$size-4: 1.75rem;   // 28px
+$size-5: 1.25rem;   // 20px
+$size-6: 1rem;      // 16px
+$size-7: 0.875rem;  // 14px
+
+// Navbar
+$navbar-background-color: transparent;
+$navbar-height: 4.5rem;
+$navbar-item-color: $text;
+$navbar-item-hover-color: $primary;
+$navbar-item-active-color: $primary;
+$navbar-item-hover-background-color: transparent;
+$navbar-box-shadow-size: 0 1px 0;
+$navbar-box-shadow-color: $grey-lighter;
+$navbar-padding-vertical: 1rem;
+$navbar-padding-horizontal: 2rem;
+
+// Buttons - Minimal & Modern
+$button-family: $family-sans-serif;
+$button-weight: 500;
+$button-border-width: 1px;
+$button-padding-vertical: 0.75em;
+$button-padding-horizontal: 2em;
+
+// Cards - Clean & Spacious
+$card-shadow: 0 0.5px 0 0 rgba(0,0,0,0.05);
+$card-radius: 0;
+$card-content-padding: 1.5rem;
+$card-header-shadow: none;
+
+// Radius - Mostly Square
+$radius: 0;
+$radius-small: 0;
+$radius-medium: 2px;
+$radius-large: 4px;
+$radius-rounded: 0;
+
+// Spacing
+$gap: 32px;
+$column-gap: 2rem;
+
+// Footer
+$footer-background-color: $black;
+$footer-color: $white-ter;
+$footer-padding: 4rem 2rem 2rem;
