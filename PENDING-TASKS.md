@@ -7,7 +7,8 @@
 3. **FAQs eliminadas** - Removida la sección de preguntas frecuentes
 4. **Productos combinados** - Almendrados y Quesitos ahora muestran "Chico/Grande"
 5. **Grid centrado** - Los productos se centran cuando quedan 2 en la fila
-6. **CSS compilado** - Estilos actualizados y compilados
+6. **Logos de delivery** - Solo logos (sin botones ni texto), con hover tooltip
+7. **CSS compilado** - Estilos actualizados y compilados con .delivery-logos
 
 ## Tareas Pendientes
 

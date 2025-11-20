@@ -738,3 +738,38 @@ body {
     font-size: 1.1rem;
   }
 }
+
+// ===================================
+// Delivery Logos
+// ===================================
+.delivery-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 768px) {
+    gap: 2rem;
+  }
+
+  a {
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
+
+    img {
+      height: 80px;
+      width: auto;
+      display: block;
+
+      @media screen and (max-width: 768px) {
+        height: 60px;
+      }
+    }
+  }
+}
