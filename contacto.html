@@ -47,26 +47,61 @@
         </div>
     </section>
 
-    <!-- Contact Methods -->
+    <!-- Contact Form -->
     <section class="section">
         <div class="container">
             <div class="has-text-centered mb-6">
                 <h2 class="title is-2">Contactanos</h2>
                 <p class="subtitle">Escribinos para consultas, reclamos o sugerencias</p>
             </div>
-            <div class="columns is-centered">
-                <div class="column is-6">
-                    <div class="contact-card">
-                        <h3 class="title is-4">WhatsApp</h3>
-                        <p>Escribinos directamente y te respondemos al instante</p>
-                        <a href="https://wa.me/5491151606666?text=Hola!%20Quisiera%20hacer%20una%20consulta"
-                           class="button is-whatsapp is-medium"
-                           target="_blank"
-                           rel="noopener">
-                            Enviar WhatsApp
-                        </a>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                            <input class="input" type="text" name="name" placeholder="Tu nombre" required>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Motivo</label>
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select name="subject" required>
+                                    <option value="">Selecciona un motivo</option>
+                                    <option value="consulta">Consulta</option>
+                                    <option value="reclamo">Reclamo</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="proveedor">Soy proveedor</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Mensaje</label>
+                        <div class="control">
+                            <textarea class="textarea" name="message" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <button type="submit" class="button is-primary is-medium is-fullwidth">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-status" id="formStatus"></div>
             </div>
         </div>
     </section>
@@ -169,28 +204,6 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section">
-        <div class="container">
-            <div class="has-text-centered mb-6">
-                <h2 class="title is-2">Preguntas Frecuentes</h2>
-            </div>
-            <div class="columns is-multiline is-variable is-6">
-                <div class="column is-6">
-                    <div class="faq-item">
-                        <h3 class="title is-5">¿Hacen envíos a domicilio?</h3>
-                        <p>Sí, hacemos envíos a través de PedidosYa y Rappi.</p>
-                    </div>
-                </div>
-                <div class="column is-6">
-                    <div class="faq-item">
-                        <h3 class="title is-5">¿Cuál es el pedido mínimo?</h3>
-                        <p>No tenemos pedido mínimo. Podés pedir desde un solo cucurucho hasta una torta para toda la familia.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">

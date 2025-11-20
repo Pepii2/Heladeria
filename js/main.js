@@ -90,53 +90,60 @@ document.addEventListener('DOMContentLoaded', function() {
 // Contact Form Handling
 // ===================================
 document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
 
     if (contactForm && formStatus) {
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             // Get form data
-            const formData = new FormData(contactForm);
+            const formData = {
+                name: contactForm.name.value,
+                email: contactForm.email.value,
+                subject: contactForm.subject.value,
+                message: contactForm.message.value
+            };
 
             // Show loading state
-            const submitButton = contactForm.querySelector('.btn-submit');
+            const submitButton = contactForm.querySelector('button[type="submit"]');
             const originalButtonText = submitButton.textContent;
             submitButton.textContent = 'Enviando...';
             submitButton.disabled = true;
 
             try {
-                // If using Formspree (update the action URL in the HTML)
-                const response = await fetch(contactForm.action, {
+                // Using Formspree (FREE service)
+                // Create account at https://formspree.io and replace YOUR_FORM_ID
+                const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
                     method: 'POST',
-                    body: formData,
                     headers: {
+                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
-                    }
+                    },
+                    body: JSON.stringify(formData)
                 });
 
                 if (response.ok) {
                     // Success
                     formStatus.textContent = '¡Mensaje enviado exitosamente! Te responderemos pronto.';
-                    formStatus.className = 'form-status success';
+                    formStatus.className = 'form-status is-success';
                     contactForm.reset();
                 } else {
                     throw new Error('Error al enviar el formulario');
                 }
             } catch (error) {
                 // Error
-                formStatus.textContent = 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contactanos por WhatsApp.';
-                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contactanos por WhatsApp al 11 5160-6666.';
+                formStatus.className = 'form-status is-error';
             } finally {
                 // Reset button state
                 submitButton.textContent = originalButtonText;
                 submitButton.disabled = false;
 
-                // Hide status message after 5 seconds
+                // Hide status message after 8 seconds
                 setTimeout(() => {
                     formStatus.className = 'form-status';
-                }, 5000);
+                }, 8000);
             }
         });
     }

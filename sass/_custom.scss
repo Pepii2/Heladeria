@@ -244,6 +244,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  max-width: 350px;
+  width: 100%;
 
   &:hover {
     transform: translateY(-4px);
@@ -305,14 +307,20 @@ body {
 // Product Grid
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+  justify-items: center;
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
   }
+}
+
+.product-card {
+  max-width: 350px;
+  width: 100%;
 }
 
 // ===================================
