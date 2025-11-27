@@ -100,11 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ===================================
-// Category Navigation (Products Page)
+// Category Navigation (Products/Sabores Page)
 // ===================================
 document.addEventListener('DOMContentLoaded', function() {
     const categoryLinks = document.querySelectorAll('.category-link');
 
+    if (categoryLinks.length === 0) return;
+
+    // Click handler for category links
     categoryLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -131,6 +134,32 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Scroll-based active category highlighting
+    const sections = [];
+    categoryLinks.forEach(link => {
+        const targetId = link.getAttribute('href');
+        const section = document.querySelector(targetId);
+        if (section) {
+            sections.push({ id: targetId, element: section, link: link });
+        }
+    });
+
+    if (sections.length > 0) {
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY + 200; // Offset for when section is considered "active"
+
+            sections.forEach(section => {
+                const sectionTop = section.element.offsetTop;
+                const sectionBottom = sectionTop + section.element.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    categoryLinks.forEach(l => l.classList.remove('is-active'));
+                    section.link.classList.add('is-active');
+                }
+            });
+        });
+    }
 });
 
 // ===================================

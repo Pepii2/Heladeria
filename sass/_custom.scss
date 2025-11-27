@@ -37,6 +37,12 @@ body {
     background-color: white;
   }
 
+  // Hide logo when navbar is transparent (on home page)
+  .navbar-brand .logo img {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
   &.is-scrolled {
     background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
@@ -49,6 +55,11 @@ body {
 
     .navbar-burger span {
       background-color: $text;
+    }
+
+    // Show logo when scrolled
+    .navbar-brand .logo img {
+      opacity: 1;
     }
   }
 
@@ -893,6 +904,11 @@ body:not(.home-page) {
 
     .navbar-burger span {
       background-color: $text;
+    }
+
+    // Always show logo on non-home pages
+    .navbar-brand .logo img {
+      opacity: 1;
     }
   }
 }
