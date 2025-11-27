@@ -56,12 +56,11 @@ $section-padding-large: 8rem 2rem;
 // Container
 $container-max-width: 1240px;
 
-// Typography - Elegant Serif + Modern Sans
-// Using Google Fonts: Cormorant Garamond + Montserrat
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+// Typography - Clean Modern Sans with Jost
+// Jost font loaded via HTML link for better performance
 
-$family-serif: 'Cormorant Garamond', Georgia, serif;
-$family-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$family-sans-serif: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$family-serif: 'Jost', Georgia, serif;
 $family-primary: $family-sans-serif;
 $family-secondary: $family-serif;
 

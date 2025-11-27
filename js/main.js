@@ -4,6 +4,53 @@
  */
 
 // ===================================
+// Navbar Scroll Effect
+// ===================================
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('is-scrolled');
+            } else {
+                navbar.classList.remove('is-scrolled');
+            }
+        });
+
+        // Check initial scroll position
+        if (window.scrollY > 50) {
+            navbar.classList.add('is-scrolled');
+        }
+    }
+});
+
+// ===================================
+// Scroll Fade-In Animations
+// ===================================
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.fade-on-scroll');
+
+    if ('IntersectionObserver' in window) {
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+    } else {
+        // Fallback for older browsers
+        fadeElements.forEach(el => el.classList.add('is-visible'));
+    }
+});
+
+// ===================================
 // Mobile Navigation Toggle (Bulma)
 // ===================================
 document.addEventListener('DOMContentLoaded', function() {
@@ -114,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 // Using Formspree (FREE service)
                 // Create account at https://formspree.io and replace YOUR_FORM_ID
-                const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                const response = await fetch('https://formspree.io/f/myzqggll', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
