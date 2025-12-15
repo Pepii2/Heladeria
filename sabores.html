@@ -17,8 +17,7 @@
             <div class="navbar-brand">
                 <a class="navbar-item logo" href="index.html">
                     <img src="images/LogoTrovatore.png" alt="Il Trovatore" style="max-height: 60px; margin-right: 1rem;">
-                    <div>
-                       </div>
+                    <div></div>
                 </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
@@ -44,12 +43,12 @@
     <section class="page-header">
         <div class="container">
             <h1 class="title">Nuestros Sabores</h1>
-            <p class="subtitle">Más de 55 sabores elaborados artesanalmente con recetas tradicionales italianas</p>
+            <p class="subtitle">Más de 55 sabores elaborados artesanalmente</p>
         </div>
     </section>
 
     <!-- Category Navigation -->
-    <section class="category-nav">
+    <section class="category-nav sticky">
         <div class="container has-text-centered">
             <a href="#cremas" class="category-link is-active">Cremas</a>
             <a href="#chocolates" class="category-link">Chocolates</a>
@@ -61,95 +60,122 @@
     <!-- Cremas Section -->
     <section id="cremas" class="section">
         <div class="container">
-            <div class="has-text-centered mb-6">
+            <div class="has-text-centered mb-6 fade-on-scroll">
                 <h2 class="title is-2">Cremas</h2>
-                <p class="subtitle">Sabores cremosos elaborados con leche fresca y ingredientes naturales</p>
             </div>
 
             <div class="flavors-grid">
-                <div class="flavor-card">
-                    <h3 class="title is-5">Banana</h3>
+                <div class="flavor-card" data-description="Banana a la crema">
+                    <h3 class="flavor-name">Banana</h3>
+                    <p class="flavor-desc">Banana a la crema</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Banana Split</h3>
+                <div class="flavor-card" data-description="Banana a la crema granizada con dulce de leche natural">
+                    <h3 class="flavor-name">Banana Split</h3>
+                    <p class="flavor-desc">Banana a la crema granizada con dulce de leche natural</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Bananita Dolca</h3>
+                <div class="flavor-card" data-description="Sabor inspirado en la golosina de banana y chocolate">
+                    <h3 class="flavor-name">Bananita Dolca</h3>
+                    <p class="flavor-desc">Sabor inspirado en la golosina de banana y chocolate</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Coco con Dulce de Leche</h3>
+                <div class="flavor-card" data-description="Coco rallado mezclado con dulce de leche">
+                    <h3 class="flavor-name">Coco con Dulce de Leche</h3>
+                    <p class="flavor-desc">Coco rallado mezclado con dulce de leche</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Cadbury</h3>
+                <div class="flavor-card" data-description="Sabor inspirado en la famosa golosina">
+                    <h3 class="flavor-name">Cadbury</h3>
+                    <p class="flavor-desc">Sabor inspirado en la famosa golosina</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Cereza a la Crema</h3>
+                <div class="flavor-card" data-description="Base de crema con cerezas al marasquino">
+                    <h3 class="flavor-name">Cereza a la Crema</h3>
+                    <p class="flavor-desc">Base de crema con cerezas al marasquino</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Crema Americana</h3>
+                <div class="flavor-card" data-description="Nuestra clásica receta">
+                    <h3 class="flavor-name">Crema Americana</h3>
+                    <p class="flavor-desc">Nuestra clásica receta</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Crema Moka</h3>
+                <div class="flavor-card" data-description="Crema con un toque de café suave">
+                    <h3 class="flavor-name">Crema Moka</h3>
+                    <p class="flavor-desc">Crema con un toque de café suave</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Crema de Almendras</h3>
+                <div class="flavor-card" data-description="Con almendras tostadas y caramelizadas">
+                    <h3 class="flavor-name">Crema de Almendras</h3>
+                    <p class="flavor-desc">Con almendras tostadas y caramelizadas</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Crema Oreo</h3>
+                <div class="flavor-card" data-description="Crema con trozos de galletitas Oreo">
+                    <h3 class="flavor-name">Crema Oreo</h3>
+                    <p class="flavor-desc">Crema con trozos de galletitas Oreo</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Crema Rusa</h3>
+                <div class="flavor-card" data-description="Clásico sabor con nueces de castilla">
+                    <h3 class="flavor-name">Crema Rusa</h3>
+                    <p class="flavor-desc">Clásico sabor con nueces de castilla</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Crema Amarena</h3>
+                <div class="flavor-card" data-description="Base de crema con frutos italianos y salsa de amarena">
+                    <h3 class="flavor-name">Crema Amarena</h3>
+                    <p class="flavor-desc">Base de crema con frutos italianos y salsa de amarena</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Crema Tramontana</h3>
+                <div class="flavor-card" data-description="Crema con dulce de leche natural y bolitas crocantes">
+                    <h3 class="flavor-name">Crema Tramontana</h3>
+                    <p class="flavor-desc">Crema con dulce de leche natural y bolitas crocantes</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Flan Trovatore</h3>
+                <div class="flavor-card" data-description="Inspirada en el flan casero con caramelo">
+                    <h3 class="flavor-name">Flan Trovatore</h3>
+                    <p class="flavor-desc">Inspirada en el flan casero con caramelo</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Frutilla a la Crema</h3>
+                <div class="flavor-card" data-description="Suave con frutillas sembradas">
+                    <h3 class="flavor-name">Frutilla a la Crema</h3>
+                    <p class="flavor-desc">Suave con frutillas sembradas</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Kinder</h3>
+                <div class="flavor-card" data-description="Sabor cremoso inspirado en el chocolate">
+                    <h3 class="flavor-name">Kinder</h3>
+                    <p class="flavor-desc">Sabor cremoso inspirado en el chocolate</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Kinder Bueno</h3>
+                <div class="flavor-card" data-description="Irresistible sabor con notas de chocolate y avellanas">
+                    <h3 class="flavor-name">Kinder Bueno</h3>
+                    <p class="flavor-desc">Irresistible sabor con notas de chocolate y avellanas</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Mascarpone</h3>
+                <div class="flavor-card" data-description="Suave crema con salsa de frutos del bosque">
+                    <h3 class="flavor-name">Mascarpone</h3>
+                    <p class="flavor-desc">Suave crema con salsa de frutos del bosque</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Marrón Glacé</h3>
+                <div class="flavor-card" data-description="Clásica crema con castañas en almíbar">
+                    <h3 class="flavor-name">Marrón Glacé</h3>
+                    <p class="flavor-desc">Clásica crema con castañas en almíbar</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Menta Granizada</h3>
+                <div class="flavor-card" data-description="Cremosa y refrescante">
+                    <h3 class="flavor-name">Menta Granizada</h3>
+                    <p class="flavor-desc">Cremosa y refrescante</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Mousse de Limón</h3>
+                <div class="flavor-card" data-description="Máxima cremosidad con sabor limón">
+                    <h3 class="flavor-name">Mousse de Limón</h3>
+                    <p class="flavor-desc">Máxima cremosidad con sabor limón</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Mousse de Maracuyá</h3>
+                <div class="flavor-card" data-description="Crema aireada con maracuyá natural">
+                    <h3 class="flavor-name">Mousse de Maracuyá</h3>
+                    <p class="flavor-desc">Crema aireada con maracuyá natural</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Pistacchio</h3>
+                <div class="flavor-card" data-description="Hecho con pepas de pistacho italiano">
+                    <h3 class="flavor-name">Pistacchio</h3>
+                    <p class="flavor-desc">Hecho con pepas de pistacho italiano</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Pistacchio Alpino</h3>
+                <div class="flavor-card" data-description="A base de chocolate blanco con salsa de pistacho">
+                    <h3 class="flavor-name">Pistacchio Alpino</h3>
+                    <p class="flavor-desc">A base de chocolate blanco con salsa de pistacho</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Sambayón</h3>
+                <div class="flavor-card" data-description="Clásico sabor con crema de yemas y vino marsala">
+                    <h3 class="flavor-name">Sambayón</h3>
+                    <p class="flavor-desc">Clásico sabor con crema de yemas y vino marsala</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Sambayón c/ Almendras Bañadas</h3>
+                <div class="flavor-card" data-description="Sambayón con almendras bañadas en chocolate">
+                    <h3 class="flavor-name">Sambayón c/ Almendras</h3>
+                    <p class="flavor-desc">Sambayón con almendras bañadas en chocolate</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Vainilla</h3>
+                <div class="flavor-card" data-description="Elaborado con chauchas de vainilla de Madagascar">
+                    <h3 class="flavor-name">Vainilla</h3>
+                    <p class="flavor-desc">Elaborado con chauchas de vainilla de Madagascar</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Mousse de Frambuesa</h3>
+                <div class="flavor-card" data-description="Crema aireada con frambuesa natural">
+                    <h3 class="flavor-name">Mousse de Frambuesa</h3>
+                    <p class="flavor-desc">Crema aireada con frambuesa natural</p>
                 </div>
             </div>
         </div>
@@ -158,59 +184,74 @@
     <!-- Chocolates Section -->
     <section id="chocolates" class="section section-cream">
         <div class="container">
-            <div class="has-text-centered mb-6">
+            <div class="has-text-centered mb-6 fade-on-scroll">
                 <h2 class="title is-2">Chocolates</h2>
-                <p class="subtitle">Elaborados con cacao premium y las mejores combinaciones</p>
             </div>
 
             <div class="flavors-grid">
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate</h3>
+                <div class="flavor-card" data-description="El clásico chocolate de Il Trovatore">
+                    <h3 class="flavor-name">Chocolate</h3>
+                    <p class="flavor-desc">El clásico chocolate de Il Trovatore</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Amargo</h3>
+                <div class="flavor-card" data-description="Intenso chocolate 70% cacao">
+                    <h3 class="flavor-name">Chocolate Amargo</h3>
+                    <p class="flavor-desc">Intenso chocolate 70% cacao</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Blanco</h3>
+                <div class="flavor-card" data-description="El tradicional chocolate blanco">
+                    <h3 class="flavor-name">Chocolate Blanco</h3>
+                    <p class="flavor-desc">El tradicional chocolate blanco</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate c/ Almendras</h3>
+                <div class="flavor-card" data-description="Chocolate con almendras tostadas y caramelizadas">
+                    <h3 class="flavor-name">Chocolate c/ Almendras</h3>
+                    <p class="flavor-desc">Chocolate con almendras tostadas y caramelizadas</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Andino</h3>
+                <div class="flavor-card" data-description="Chocolate con trozos de chocolate blanco y salsa de frutos del bosque">
+                    <h3 class="flavor-name">Chocolate Andino</h3>
+                    <p class="flavor-desc">Chocolate con trozos de chocolate blanco y salsa de frutos del bosque</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Rocher / Nutella</h3>
+                <div class="flavor-card" data-description="Chocolate con avellanas inspirado en la Nutella y Rocher">
+                    <h3 class="flavor-name">Chocolate Rocher / Nutella</h3>
+                    <p class="flavor-desc">Chocolate con avellanas inspirado en la Nutella y Rocher</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocotorta</h3>
+                <div class="flavor-card" data-description="Sabor inspirado en el postre clásico argentino">
+                    <h3 class="flavor-name">Chocotorta</h3>
+                    <p class="flavor-desc">Sabor inspirado en el postre clásico argentino</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Mousse de Chocolate</h3>
+                <div class="flavor-card" data-description="Chocolate suave y aireado">
+                    <h3 class="flavor-name">Mousse de Chocolate</h3>
+                    <p class="flavor-desc">Chocolate suave y aireado</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Bariloche</h3>
+                <div class="flavor-card" data-description="Chocolate con frutas secas">
+                    <h3 class="flavor-name">Chocolate Bariloche</h3>
+                    <p class="flavor-desc">Chocolate con frutas secas</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate con Cereza</h3>
+                <div class="flavor-card" data-description="Chocolate mezclado con cerezas dulces al marasquino">
+                    <h3 class="flavor-name">Chocolate con Cereza</h3>
+                    <p class="flavor-desc">Chocolate mezclado con cerezas dulces al marasquino</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate c/ Pasas al Rhum</h3>
+                <div class="flavor-card" data-description="Con pasas maceradas en rhum negrita importado">
+                    <h3 class="flavor-name">Chocolate c/ Pasas al Rhum</h3>
+                    <p class="flavor-desc">Con pasas maceradas en rhum negrita importado</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Italiano</h3>
+                <div class="flavor-card" data-description="Chocolate con nueces y almendras tostadas">
+                    <h3 class="flavor-name">Chocolate Italiano</h3>
+                    <p class="flavor-desc">Chocolate con nueces y almendras tostadas</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Suizo</h3>
+                <div class="flavor-card" data-description="Chocolate con trozos de chocolate blanco y dulce de leche natural">
+                    <h3 class="flavor-name">Chocolate Suizo</h3>
+                    <p class="flavor-desc">Chocolate con trozos de chocolate blanco y dulce de leche natural</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Spumone</h3>
+                <div class="flavor-card" data-description="Chocolate aireado y espumoso">
+                    <h3 class="flavor-name">Spumone</h3>
+                    <p class="flavor-desc">Chocolate aireado y espumoso</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Granizado</h3>
+                <div class="flavor-card" data-description="Base de crema americana granizada con una pizca de licor">
+                    <h3 class="flavor-name">Chocolate Granizado</h3>
+                    <p class="flavor-desc">Base de crema americana granizada con una pizca de licor</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Chocolate Árabe c/ Pistacho</h3>
+                <div class="flavor-card" data-description="Chocolate inspirado en Dubai con kadaif crocante y pistacho">
+                    <h3 class="flavor-name">Chocolate Árabe c/ Pistacho</h3>
+                    <p class="flavor-desc">Chocolate inspirado en Dubai con kadaif crocante y pistacho</p>
                 </div>
             </div>
         </div>
@@ -219,26 +260,30 @@
     <!-- Dulce de Leche Section -->
     <section id="dulce-de-leche" class="section">
         <div class="container">
-            <div class="has-text-centered mb-6">
+            <div class="has-text-centered mb-6 fade-on-scroll">
                 <h2 class="title is-2">Dulce de Leche</h2>
-                <p class="subtitle">El clásico argentino en todas sus versiones</p>
             </div>
 
             <div class="flavors-grid">
-                <div class="flavor-card">
-                    <h3 class="title is-5">Dulce de Leche</h3>
+                <div class="flavor-card" data-description="Elaborado de forma artesanal con la receta histórica">
+                    <h3 class="flavor-name">Dulce de Leche</h3>
+                    <p class="flavor-desc">Elaborado de forma artesanal con la receta histórica</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Super Dulce de Leche</h3>
+                <div class="flavor-card" data-description="Con dulce de leche natural y trozos de chocolate blanco">
+                    <h3 class="flavor-name">Super Dulce de Leche</h3>
+                    <p class="flavor-desc">Con dulce de leche natural y trozos de chocolate blanco</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Dulce de Leche c/ Almendras y Nueces</h3>
+                <div class="flavor-card" data-description="Dulce de leche con frutos secos tostados">
+                    <h3 class="flavor-name">Dulce de Leche c/ Almendras y Nueces</h3>
+                    <p class="flavor-desc">Dulce de leche con frutos secos tostados</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Dulce de Leche Granizado</h3>
+                <div class="flavor-card" data-description="El clásico sabor con chocolate granizado">
+                    <h3 class="flavor-name">Dulce de Leche Granizado</h3>
+                    <p class="flavor-desc">El clásico sabor con chocolate granizado</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Dulce de Leche Bombón</h3>
+                <div class="flavor-card" data-description="Con bombones bañados en chocolate y rellenos de dulce de leche">
+                    <h3 class="flavor-name">Dulce de Leche Bombón</h3>
+                    <p class="flavor-desc">Con bombones bañados en chocolate y rellenos de dulce de leche</p>
                 </div>
             </div>
         </div>
@@ -247,26 +292,30 @@
     <!-- Frutales Section -->
     <section id="frutales" class="section section-cream">
         <div class="container">
-            <div class="has-text-centered mb-6">
+            <div class="has-text-centered mb-6 fade-on-scroll">
                 <h2 class="title is-2">Frutales</h2>
-                <p class="subtitle">Sabores refrescantes con frutas naturales</p>
             </div>
 
             <div class="flavors-grid">
-                <div class="flavor-card">
-                    <h3 class="title is-5">Ananá</h3>
+                <div class="flavor-card" data-description="Ananá natural al agua">
+                    <h3 class="flavor-name">Ananá</h3>
+                    <p class="flavor-desc">Ananá natural al agua</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Frutilla</h3>
+                <div class="flavor-card" data-description="Frutilla natural al agua">
+                    <h3 class="flavor-name">Frutilla</h3>
+                    <p class="flavor-desc">Frutilla natural al agua</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Limón</h3>
+                <div class="flavor-card" data-description="Con limones frescos y el ácido justo">
+                    <h3 class="flavor-name">Limón</h3>
+                    <p class="flavor-desc">Con limones frescos y el ácido justo</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Naranja</h3>
+                <div class="flavor-card" data-description="Helado al agua con naranjas seleccionadas">
+                    <h3 class="flavor-name">Naranja</h3>
+                    <p class="flavor-desc">Helado al agua con naranjas seleccionadas</p>
                 </div>
-                <div class="flavor-card">
-                    <h3 class="title is-5">Lemon Pie</h3>
+                <div class="flavor-card" data-description="Sabor a limón suave con crocante y merengue italiano flameado">
+                    <h3 class="flavor-name">Lemon Pie</h3>
+                    <p class="flavor-desc">Sabor a limón suave con crocante y merengue italiano flameado</p>
                 </div>
             </div>
         </div>
@@ -275,11 +324,11 @@
     <!-- Order CTA -->
     <section class="section section-beige">
         <div class="container">
-            <div class="has-text-centered mb-6">
+            <div class="has-text-centered mb-6 fade-on-scroll">
                 <h2 class="title is-2">¿Te antojaste?</h2>
-                <p class="subtitle">Pedí tus sabores favoritos ahora</p>
+                <p class="subtitle">Hacé tu pedido ahora</p>
             </div>
-            <div class="delivery-logos">
+            <div class="delivery-logos fade-on-scroll">
                 <a href="#" target="_blank" rel="noopener" title="Pedí en PedidosYa">
                     <img src="images/logos/pedidosya.png" alt="PedidosYa">
                 </a>
@@ -309,16 +358,28 @@
                     </ul>
                 </div>
                 <div class="column is-4">
-                    <h4 class="title is-6">Contacto</h4>
-                    <ul>
-                        <li><a href="https://wa.me/5491151606666" target="_blank">WhatsApp</a></li>
-                        <li><a href="#" target="_blank">PedidosYa</a></li>
-                        <li><a href="#" target="_blank">Rappi</a></li>
-                    </ul>
+                    <h4 class="title is-6">Redes</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/iltrovatorehelados" target="_blank" rel="noopener" title="Instagram">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/1QQatS6fZm/" target="_blank" rel="noopener" title="Facebook">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@iltrovatore" target="_blank" rel="noopener" title="TikTok">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Il Trovatore. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Il Trovatore. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
