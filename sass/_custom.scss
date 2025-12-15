@@ -4,6 +4,35 @@
 // ===================================
 
 // ===================================
+// EXPERIMENTAL: Old Scroll / Parchment Theme
+// ===================================
+
+// Parchment texture background (for all sections)
+@mixin parchment-texture {
+  background-color: #f5f0e1;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, rgba(245, 240, 225, 0.95) 0%, rgba(235, 225, 200, 0.98) 100%);
+  background-blend-mode: soft-light, normal;
+}
+
+// Darker parchment for contrast sections
+@mixin parchment-texture-dark {
+  background-color: #ebe0c8;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, rgba(235, 224, 200, 0.95) 0%, rgba(220, 205, 175, 0.98) 100%);
+  background-blend-mode: soft-light, normal;
+}
+
+// Subtle paper edge shadow
+@mixin scroll-edge {
+  box-shadow:
+    inset 0 0 80px rgba(139, 115, 85, 0.08),
+    inset 0 0 20px rgba(139, 115, 85, 0.05);
+}
+
+// ===================================
 // Global Styles
 // ===================================
 html {
@@ -13,6 +42,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include parchment-texture;
 }
 
 // ===================================
@@ -165,16 +195,21 @@ body {
 // Sections
 // ===================================
 .section {
+  @include parchment-texture;
+  @include scroll-edge;
+
   &.section-alt {
-    background-color: $white-ter;
+    @include parchment-texture;
+    background-color: #ebe5d5;
   }
 
   &.section-beige {
-    background-color: $beige;
+    @include parchment-texture-dark;
   }
 
   &.section-cream {
-    background-color: $cream;
+    @include parchment-texture;
+    background-color: #f0e8d8;
   }
 
   &.section-dark {
@@ -190,12 +225,15 @@ body {
 
 // Page Headers
 .page-header {
-  background: linear-gradient(135deg, $cream 0%, $beige 100%);
-  padding: 8rem 2rem 5rem;
+  padding: 10rem 2rem 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  // Dark overlay
   &::before {
     content: '';
     position: absolute;
@@ -203,28 +241,34 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../images/hero-pattern.svg');
-    opacity: 0.03;
-    z-index: 0;
-  }
-
-  .container {
-    position: relative;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
     z-index: 1;
   }
 
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
   .title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: $primary-dark;
+    color: $white;
     font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   }
 
   .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     max-width: 700px;
     margin: 0 auto;
-    color: $grey-dark;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -295,17 +339,26 @@ body {
 // Product Cards - E-commerce Style
 // ===================================
 .product-card {
-  background-color: $white;
+  background-color: #f8f4eb;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-blend-mode: soft-light;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
   max-width: 350px;
   width: 100%;
+  border: 1px solid rgba(139, 115, 85, 0.2);
+  box-shadow:
+    2px 2px 8px rgba(139, 115, 85, 0.15),
+    inset 0 0 30px rgba(139, 115, 85, 0.03);
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      4px 4px 16px rgba(139, 115, 85, 0.25),
+      inset 0 0 30px rgba(139, 115, 85, 0.05);
 
     .product-image img {
       transform: scale(1.05);
@@ -317,7 +370,8 @@ body {
     width: 100%;
     padding-top: 100%; // 1:1 aspect ratio
     overflow: hidden;
-    background-color: $beige;
+    background-color: #e8e0d0;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.15);
 
     img {
       position: absolute;
@@ -419,17 +473,25 @@ body {
 // Value Cards - Feature Highlights
 // ===================================
 .value-card {
-  background-color: $white;
+  background-color: #f8f4eb;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-blend-mode: soft-light;
   padding: 3rem 2rem;
   text-align: center;
   height: 100%;
-  border: 1px solid $grey-lighter;
+  border: 1px solid rgba(139, 115, 85, 0.2);
   transition: all 0.3s ease;
+  box-shadow:
+    2px 2px 8px rgba(139, 115, 85, 0.12),
+    inset 0 0 40px rgba(139, 115, 85, 0.03);
 
   &:hover {
     border-color: $primary;
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow:
+      4px 4px 16px rgba(139, 115, 85, 0.2),
+      inset 0 0 40px rgba(139, 115, 85, 0.05);
   }
 
   .value-icon {
@@ -562,9 +624,15 @@ body {
 .contact-form {
   max-width: 700px;
   margin: 0 auto;
-  background-color: $white;
+  background-color: #f8f4eb;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-blend-mode: soft-light;
   padding: 3rem;
-  border: 1px solid $grey-lighter;
+  border: 1px solid rgba(139, 115, 85, 0.2);
+  box-shadow:
+    3px 3px 12px rgba(139, 115, 85, 0.15),
+    inset 0 0 50px rgba(139, 115, 85, 0.03);
 
   .label {
     font-weight: 600;
@@ -577,7 +645,8 @@ body {
   .input,
   .textarea,
   .select select {
-    border-color: $grey-lighter;
+    border-color: rgba(139, 115, 85, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
 
     &:focus {
       border-color: $primary;
@@ -651,15 +720,20 @@ body {
 // Footer
 // ===================================
 .footer {
-  border-top: 1px solid $grey-lighter;
+  @include parchment-texture-dark;
+  border-top: 3px solid rgba(139, 115, 85, 0.2);
 
   .title,
   .subtitle {
-    color: $white;
+    color: $primary-dark;
+  }
+
+  p {
+    color: $grey-dark;
   }
 
   a {
-    color: $white-ter;
+    color: $primary-dark;
     transition: color 0.3s ease;
 
     &:hover {
@@ -670,12 +744,12 @@ body {
   .footer-bottom {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(139, 115, 85, 0.15);
     text-align: center;
 
     p {
       font-size: 0.875rem;
-      color: $grey-light;
+      color: $grey-dark;
       margin: 0;
     }
   }
@@ -780,9 +854,12 @@ body {
 }
 
 .flavor-card {
-  background: $white;
+  background-color: #f8f4eb;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-blend-mode: soft-light;
   padding: 1.25rem 1rem;
-  border: 1px solid $grey-lighter;
+  border: 1px solid rgba(139, 115, 85, 0.2);
   transition: all 0.3s ease;
   text-align: center;
   min-height: 80px;
@@ -792,6 +869,9 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  box-shadow:
+    1px 1px 4px rgba(139, 115, 85, 0.1),
+    inset 0 0 20px rgba(139, 115, 85, 0.02);
 
   @media screen and (max-width: 768px) {
     padding: 1rem 0.75rem;
@@ -800,7 +880,9 @@ body {
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    box-shadow:
+      3px 3px 12px rgba(139, 115, 85, 0.2),
+      inset 0 0 20px rgba(139, 115, 85, 0.04);
     border-color: $primary;
 
     .flavor-desc {
@@ -890,17 +972,22 @@ body {
 // Schedule Card (Horarios)
 // ===================================
 .schedule-card {
-  background-color: $white;
+  background-color: #f8f4eb;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-blend-mode: soft-light;
   padding: 2.5rem 3rem;
-  border: 1px solid $grey-lighter;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(139, 115, 85, 0.2);
+  box-shadow:
+    3px 3px 12px rgba(139, 115, 85, 0.15),
+    inset 0 0 40px rgba(139, 115, 85, 0.03);
 
   @media screen and (max-width: 768px) {
     padding: 1.5rem;
   }
 
   .columns {
-    border-bottom: 1px solid $grey-lighter;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.15);
     padding: 1rem 0;
     margin: 0;
 
@@ -1001,11 +1088,12 @@ body {
   margin-top: 0.5rem;
 
   a {
-    color: $grey-light;
-    transition: color 0.3s ease;
+    color: $primary-dark;
+    transition: color 0.3s ease, transform 0.3s ease;
 
     &:hover {
-      color: $white;
+      color: $secondary;
+      transform: scale(1.1);
     }
   }
 }

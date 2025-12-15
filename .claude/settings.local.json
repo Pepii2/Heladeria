@@ -7,7 +7,8 @@
       "Bash(timeout /t 2)",
       "Bash(nul)",
       "Bash(curl:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []
