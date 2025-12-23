@@ -421,3 +421,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ===================================
+// Mobile Flavor Card Tap Toggle
+// ===================================
+document.addEventListener('DOMContentLoaded', function() {
+    // Only on mobile devices
+    if (window.innerWidth <= 768) {
+        const flavorCards = document.querySelectorAll('.flavor-card');
+        
+        flavorCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Toggle active class
+                this.classList.toggle('active');
+                
+                // Close other cards
+                flavorCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.classList.remove('active');
+                    }
+                });
+            });
+        });
+    }
+});
+

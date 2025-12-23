@@ -61,3 +61,24 @@
     right: 30px;
 }
 
+
+/* Fix navbar background on mobile */
+.navbar {
+    background-color: #fff !important;
+}
+
+/* Mobile flavor descriptions - make them tap-to-toggle */
+@media screen and (max-width: 768px) {
+    .flavor-card .flavor-description {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    
+    .flavor-card.active .flavor-description {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
