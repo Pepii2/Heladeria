@@ -82,3 +82,25 @@
     }
 }
 
+
+/* Center YouTube videos grid */
+.videos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-container {
+    flex: 0 1 calc(33.333% - 2rem);
+    min-width: 280px;
+}
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        flex: 0 1 100%;
+    }
+}
+
