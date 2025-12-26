@@ -104,3 +104,15 @@
     }
 }
 
+
+/* Navbar gradient effect */
+.navbar {
+    background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.8) 70%, white 100%) !important;
+    transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
