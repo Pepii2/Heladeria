@@ -142,3 +142,23 @@
     text-shadow: none;
 }
 
+
+/* Remove white line from navbar */
+.navbar {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar.scrolled {
+    background: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* Remove any bottom border from navbar elements */
+.navbar-brand,
+.navbar-menu,
+.navbar-start,
+.navbar-end {
+    border: none !important;
+}
+
