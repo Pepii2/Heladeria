@@ -547,6 +547,11 @@ body {
       }
     }
 
+    &.is-80 {
+      width: 80%;
+      margin: 0 auto;
+    }
+
     .image-caption {
       margin-top: 1rem;
       font-size: 0.875rem;
