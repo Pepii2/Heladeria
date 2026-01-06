@@ -414,21 +414,21 @@ body {
 
 // Product Grid
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-top: 3rem;
-  justify-items: center;
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
   }
 }
 
 .product-card {
-  max-width: 350px;
-  width: 100%;
+  flex: 0 0 300px;
+  max-width: 100%;
+  width: 300px;
 }
 
 // ===================================
@@ -845,19 +845,17 @@ body {
 // Flavors Grid (Sabores Page)
 // ===================================
 .flavors-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
   margin-top: 2rem;
-  justify-items: center;
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 0.75rem;
-  }
 }
 
 .flavor-card {
+  flex: 0 0 220px;
+  width: 220px;
+  min-height: 140px; // Enforce minimum height for consistency
   background-color: #f8f4eb;
   background-image:
     url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
@@ -1183,18 +1181,17 @@ body:not(.home-page) {
 // Video Grid
 // ===================================
 .videos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
-  justify-items: center;
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .video-container {
+  flex: 0 0 320px;
+  width: 320px;
+  max-width: 100%;
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 Aspect Ratio */
