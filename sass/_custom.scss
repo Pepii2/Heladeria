@@ -1193,8 +1193,8 @@ body:not(.home-page) {
   width: 320px;
   max-width: 100%;
   position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 Aspect Ratio */
+  padding-bottom: 100%;
+  /* 1:1 Aspect Ratio (Square) */
   height: 0;
   width: 100%;
   overflow: hidden;
