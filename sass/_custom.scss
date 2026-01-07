@@ -53,10 +53,12 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  // Gradient from white (left) to transparent (right) for logo contrast
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
   backdrop-filter: blur(5px);
   transition: all 0.4s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
 
   .navbar-item {
     color: white;
@@ -67,9 +69,9 @@ body {
     background-color: white;
   }
 
-  // Hide logo when navbar is transparent (on home page)
+  // Show logo even when navbar is transparent
   .navbar-brand .logo img {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.4s ease;
   }
 

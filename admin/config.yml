@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: cms-exploring
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "data"
+    label: "Data"
+    files:
+      - name: "products"
+        label: "Productos"
+        file: "data/products.json"
+        fields:
+          - name: "helados"
+            label: "Helados"
+            widget: "list"
+            fields:
+              - {label: "Nombre", name: "name", widget: "string"}
+              - {label: "Descripción", name: "description", widget: "string", required: false}
+              - {label: "Imagen", name: "image", widget: "image"}
+              - {label: "Estilo Imagen", name: "imageStyle", widget: "string", required: false}
+          - name: "postres"
+            label: "Postres"
+            widget: "list"
+            fields:
+              - {label: "Nombre", name: "name", widget: "string"}
+              - {label: "Descripción", name: "description", widget: "string", required: false}
+              - {label: "Imagen", name: "image", widget: "image"}
+              - {label: "Estilo Imagen", name: "imageStyle", widget: "string", required: false}

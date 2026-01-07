@@ -1,0 +1,108 @@
+{
+    "helados": [
+        {
+            "name": "Vaso Chico",
+            "description": "2 sabores",
+            "image": "images/vasito chico 1.JPG",
+            "imageStyle": "transform: scale(1.2);"
+        },
+        {
+            "name": "Vaso Grande",
+            "description": "2 sabores",
+            "image": "images/vasito grande.JPG"
+        },
+        {
+            "name": "Cucurucho",
+            "description": "2 sabores",
+            "image": "images/Tres-cucuruchos.jpg"
+        },
+        {
+            "name": "¼ de Kilo",
+            "description": "Hasta 3 sabores",
+            "image": "images/cuarto-de-helado.jpg"
+        },
+        {
+            "name": "½ Kilo",
+            "description": "Hasta 4 sabores",
+            "image": "images/medio kilo.JPG"
+        },
+        {
+            "name": "1 Kilo",
+            "description": "Hasta 4 sabores",
+            "image": "images/kilo-de-helado.jpg"
+        }
+    ],
+    "postres": [
+        {
+            "name": "Almendrado",
+            "description": "Chico / Grande",
+            "image": "images/postre-almendrado-grande.jpg"
+        },
+        {
+            "name": "Cheesecake",
+            "description": "",
+            "image": "images/cheescake.JPG"
+        },
+        {
+            "name": "Chocotorta",
+            "description": "",
+            "image": "images/chocotorta-helada.jpg"
+        },
+        {
+            "name": "Torta Kinder",
+            "description": "",
+            "image": "images/tortakinder.JPG"
+        },
+        {
+            "name": "Torta Nutella",
+            "description": "",
+            "image": "images/torta-nutella.jpg"
+        },
+        {
+            "name": "Torta Oreo",
+            "description": "",
+            "image": "images/ttorta-oreo.jpg"
+        },
+        {
+            "name": "Quesito",
+            "description": "Chico / Grande",
+            "image": "images/postre-quesito-grande.jpg"
+        },
+        {
+            "name": "Quesito Cereza",
+            "description": "",
+            "image": "images/postre-cereza.jpg"
+        },
+        {
+            "name": "Quesito Sambayón",
+            "description": "",
+            "image": "images/postre-sambayon.jpg"
+        },
+        {
+            "name": "Postre Clásico",
+            "description": "",
+            "image": "images/postre-clasico.jpg"
+        },
+        {
+            "name": "Postre Dolca",
+            "description": "",
+            "image": "images/postre-dolka.jpg"
+        },
+        {
+            "name": "Torta Pistacchio Italiano",
+            "description": "",
+            "image": "images/torta-pistacho.jpg"
+        },
+        {
+            "name": "Torta Trovatore",
+            "description": "",
+            "image": "images/torta-iltrovatore.jpg"
+        },
+        {
+            "name": "Torta Dubai",
+            "description": "",
+            "image": "images/torta dubai.JPG",
+            "imageStyle": "object-position: 30% center;"
+        }
+    ]
+}

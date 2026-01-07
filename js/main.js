@@ -6,11 +6,11 @@
 // ===================================
 // Navbar Scroll Effect
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
 
     if (navbar) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 50) {
                 navbar.classList.add('is-scrolled');
             } else {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Scroll Fade-In Animations
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const fadeElements = document.querySelectorAll('.fade-on-scroll');
 
     if ('IntersectionObserver' in window) {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Mobile Navigation Toggle (Bulma)
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Bulma navbar burger toggle
     const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
@@ -72,13 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
 
     if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
             this.classList.toggle('active');
         });
 
         // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const isClickInsideMenu = navMenu.contains(event.target);
             const isClickOnToggle = mobileMenuToggle.contains(event.target);
 
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close menu when clicking on a link
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
             });
@@ -102,14 +102,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Category Navigation (Products/Sabores Page)
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const categoryLinks = document.querySelectorAll('.category-link');
 
     if (categoryLinks.length === 0) return;
 
     // Click handler for category links
     categoryLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
 
             // Remove is-active class from all links
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (sections.length > 0) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollPosition = window.scrollY + 200; // Offset for when section is considered "active"
 
             sections.forEach(section => {
@@ -165,12 +165,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Contact Form Handling
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
     if (contactForm && formStatus) {
-        contactForm.addEventListener('submit', async function(e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
 
             // Get form data
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Scroll to Top Button (Optional)
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Create scroll to top button
     const scrollButton = document.createElement('button');
     scrollButton.innerHTML = '↑';
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(scrollButton);
 
     // Show/hide button based on scroll position
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.pageYOffset > 300) {
             scrollButton.style.opacity = '1';
             scrollButton.style.visibility = 'visible';
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Scroll to top when clicked
-    scrollButton.addEventListener('click', function() {
+    scrollButton.addEventListener('click', function () {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -275,11 +275,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Hover effect
-    scrollButton.addEventListener('mouseenter', function() {
+    scrollButton.addEventListener('mouseenter', function () {
         this.style.transform = 'scale(1.1)';
     });
 
-    scrollButton.addEventListener('mouseleave', function() {
+    scrollButton.addEventListener('mouseleave', function () {
         this.style.transform = 'scale(1)';
     });
 });
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Image Lazy Loading Enhancement
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('img[loading="lazy"]');
 
     if ('IntersectionObserver' in window) {
@@ -308,11 +308,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Smooth Scroll for All Internal Links
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const internalLinks = document.querySelectorAll('a[href^="#"]');
 
     internalLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
 
             // Skip if it's just "#"
@@ -338,59 +338,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// ===================================
+// Product Data Loading (CMS Integration)
+// ===================================
+document.addEventListener('DOMContentLoaded', async function () {
+    // Only run on products page
+    const heladosGrid = document.getElementById('helados-grid');
+    const postresGrid = document.getElementById('postres-grid');
 
-// ===================================
-// Product Data Loading (Optional - for Drive integration)
-// ===================================
-/**
- * This function can be used to load product data from Google Sheets
- * Example usage with a public Google Sheets CSV export URL
- */
-async function loadProductsFromDrive(sheetUrl, targetElementId) {
+    if (!heladosGrid && !postresGrid) return;
+
     try {
-        const response = await fetch(sheetUrl);
-        const csvText = await response.text();
+        const response = await fetch('data/products.json');
+        if (!response.ok) throw new Error('Failed to load products');
 
-        // Parse CSV (simple implementation)
-        const rows = csvText.split('\n');
-        const products = [];
+        const data = await response.json();
 
-        // Skip header row
-        for (let i = 1; i < rows.length; i++) {
-            const columns = rows[i].split(',');
-            if (columns.length >= 3) {
-                products.push({
-                    name: columns[0].trim(),
-                    description: columns[1].trim(),
-                    imageUrl: columns[2].trim(),
-                    price: columns[3] ? columns[3].trim() : null
-                });
-            }
+        if (heladosGrid && data.helados) {
+            renderProducts(heladosGrid, data.helados);
         }
 
-        // Render products
-        const targetElement = document.getElementById(targetElementId);
-        if (targetElement) {
-            targetElement.innerHTML = products.map(product => `
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="${product.imageUrl}" alt="${product.name}" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                        ${product.price ? `<p class="product-price">${product.price}</p>` : ''}
-                    </div>
-                </div>
-            `).join('');
+        if (postresGrid && data.postres) {
+            renderProducts(postresGrid, data.postres);
         }
+
     } catch (error) {
         console.error('Error loading products:', error);
+        if (heladosGrid) heladosGrid.innerHTML = '<div class="notification is-danger">Error al cargar los productos. Por favor recarga la página.</div>';
+        if (postresGrid) postresGrid.innerHTML = '<div class="notification is-danger">Error al cargar los postres. Por favor recarga la página.</div>';
+    }
+});
+
+function renderProducts(container, products) {
+    if (!products || products.length === 0) {
+        container.innerHTML = '<p class="has-text-centered">No hay productos disponibles.</p>';
+        return;
+    }
+
+    container.innerHTML = products.map(product => `
+        <div class="product-card fade-in">
+            <div class="product-image">
+                <img src="${product.image}"
+                     alt="${product.name}"
+                     loading="lazy"
+                     style="${product.imageStyle || ''}">
+            </div>
+            <div class="product-info">
+                <h3 class="title is-5">${product.name}</h3>
+                ${product.description ? `<p class="subtitle is-6">${product.description}</p>` : ''}
+            </div>
+        </div>
+    `).join('');
+
+    // Trigger lazy loading observer for new images
+    const newImages = container.querySelectorAll('img[loading="lazy"]');
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('fade-in');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        newImages.forEach(img => imageObserver.observe(img));
+    } else {
+        newImages.forEach(img => img.classList.add('fade-in'));
     }
 }
-
-// Example usage (uncomment and update URL when ready):
-// loadProductsFromDrive('YOUR_GOOGLE_SHEETS_CSV_EXPORT_URL', 'flavors-grid');
 
 // ===================================
 // Analytics (Optional)
@@ -399,14 +415,14 @@ async function loadProductsFromDrive(sheetUrl, targetElementId) {
  * Track button clicks for analytics
  * Can be integrated with Google Analytics or similar
  */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const trackableButtons = document.querySelectorAll('.btn-pedidosya, .btn-rappi, .btn-whatsapp');
 
     trackableButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const buttonType = this.classList.contains('btn-pedidosya') ? 'PedidosYa' :
-                              this.classList.contains('btn-rappi') ? 'Rappi' :
-                              this.classList.contains('btn-whatsapp') ? 'WhatsApp' : 'Unknown';
+                this.classList.contains('btn-rappi') ? 'Rappi' :
+                    this.classList.contains('btn-whatsapp') ? 'WhatsApp' : 'Unknown';
 
             // Log to console (replace with actual analytics code)
             console.log(`Button clicked: ${buttonType}`);
@@ -425,16 +441,16 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Mobile Flavor Card Tap Toggle
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Only on mobile devices
     if (window.innerWidth <= 768) {
         const flavorCards = document.querySelectorAll('.flavor-card');
-        
+
         flavorCards.forEach(card => {
-            card.addEventListener('click', function() {
+            card.addEventListener('click', function () {
                 // Toggle active class
                 this.classList.toggle('active');
-                
+
                 // Close other cards
                 flavorCards.forEach(otherCard => {
                     if (otherCard !== this) {
@@ -450,10 +466,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Navbar Scroll Effect
 // ===================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -461,4 +477,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
