@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: cms-exploring
 
+local_backend: true
+
 media_folder: "images"
 public_folder: "images"
 
