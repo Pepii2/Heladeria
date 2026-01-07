@@ -24,7 +24,7 @@
         {
             "name": "½ Kilo",
             "description": "Hasta 4 sabores",
-            "image": "images/medio kilo.JPG"
+            "image": "images/medio-kilo.jpg"
         },
         {
             "name": "1 Kilo",
@@ -41,7 +41,7 @@
         {
             "name": "Cheesecake",
             "description": "",
-            "image": "images/cheescake.JPG"
+            "image": "images/cheesecake.jpg"
         },
         {
             "name": "Chocotorta",
@@ -101,7 +101,7 @@
         {
             "name": "Torta Dubai",
             "description": "",
-            "image": "images/torta dubai.JPG",
+            "image": "images/torta-dubai.jpg",
             "imageStyle": "object-position: 30% center;"
         }
     ]
